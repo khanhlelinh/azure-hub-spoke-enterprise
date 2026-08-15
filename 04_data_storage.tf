@@ -2,16 +2,16 @@
 
 # 1. Cơ sở dữ liệu SQL (Dành cho Kế toán / Nhân sự)
 resource "azurerm_mssql_server" "sql_server" {
-  name                         = "baoyen-sql-server-prod"
-  resource_group_name          = azurerm_resource_group.baoyen_rg.name
-  location                     = azurerm_resource_group.baoyen_rg.location
+  name                         = "logistics_corp-sql-server-prod"
+  resource_group_name          = azurerm_resource_group.logistics_corp_rg.name
+  location                     = azurerm_resource_group.logistics_corp_rg.location
   version                      = "12.0"
-  administrator_login          = "baoyensqladmin"
+  administrator_login          = "logistics_corpsqladmin"
   administrator_login_password = "P@ssw0rd1234!"
 }
 
 resource "azurerm_mssql_database" "erp_db" {
-  name           = "BaoYen-ERP-DB"
+  name           = "logistics_corp-ERP-DB"
   server_id      = azurerm_mssql_server.sql_server.id
   collation      = "SQL_Latin1_General_CP1_CI_AS"
   license_type   = "LicenseIncluded"
@@ -21,9 +21,9 @@ resource "azurerm_mssql_database" "erp_db" {
 
 # 2. Data Lake / Kho dữ liệu thô (Dành cho bản vẽ CAD, GPS, Camera xe khách)
 resource "azurerm_storage_account" "datalake_storage" {
-  name                     = "baoyendatalakeprod"
-  resource_group_name      = azurerm_resource_group.baoyen_rg.name
-  location                 = azurerm_resource_group.baoyen_rg.location
+  name                     = "logistics_corpdatalakeprod"
+  resource_group_name      = azurerm_resource_group.logistics_corp_rg.name
+  location                 = azurerm_resource_group.logistics_corp_rg.location
   account_tier             = "Standard"
   account_replication_type = "ZRS" # Phân tán 3 trung tâm dữ liệu chống thảm họa
   

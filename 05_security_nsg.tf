@@ -2,9 +2,9 @@
 
 # Tường lửa bảo vệ máy chủ ERP
 resource "azurerm_network_security_group" "erp_nsg" {
-  name                = "BaoYen-ERP-NSG"
-  location            = azurerm_resource_group.baoyen_rg.location
-  resource_group_name = azurerm_resource_group.baoyen_rg.name
+  name                = "logistics_corp-ERP-NSG"
+  location            = azurerm_resource_group.logistics_corp_rg.location
+  resource_group_name = azurerm_resource_group.logistics_corp_rg.name
 
   # Cho phép Web Traffic
   security_rule {

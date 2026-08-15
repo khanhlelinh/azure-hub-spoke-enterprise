@@ -15,8 +15,8 @@ provider "azurerm" {
 }
 
 # Tạo Resource Group tập trung cho toàn bộ Dự án Chuyển đổi số
-resource "azurerm_resource_group" "baoyen_rg" {
-  name     = "BaoYen-Digital-Transformation-RG"
+resource "azurerm_resource_group" "logistics_corp_rg" {
+  name     = "logistics_corp-Digital-Transformation-RG"
   location = "Southeast Asia" # Máy chủ đặt tại Singapore để tốc độ về VN nhanh nhất
   
   tags = {
