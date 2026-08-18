@@ -1,19 +1,28 @@
-# Hi there, I'm Linh 👋 
-### ☁️ Multi-Cloud Solutions Architect | 🤖 AI Automation Lead
+# Azure Hub & Spoke Architecture
 
-I am a passionate technology leader specializing in designing scalable, secure, and highly available architectures across **Microsoft Azure** and **AWS**. I bridge the gap between traditional enterprise IT and modern cloud-native solutions.
+![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white) <br>
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white) <br>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge) <br>
+![CI](https://img.shields.io/badge/CI-passing-brightgreen.svg?style=for-the-badge)
 
-#### 🛠️ My Core Arsenal:
-- **Cloud Infrastructure:** Multi-tier Architecture, Hub-Spoke Topology, Migration Strategies.
-- **Infrastructure as Code (IaC):** `Terraform` - Automating enterprise deployments from zero to hero.
-- **Workflow Automation & AI:** `n8n`, `PowerShell`, OpenAI Integration (Vibe Coding) for real-time data analytics and automated closing.
-- **Security & Governance:** M365 Zero Trust, Intune MDM, Purview DLP.
-- **Cloud Operations & Hybrid Infrastructure:** Hands-on experience administering Microsoft Azure cloud environments alongside hybrid virtualization (VMware/Hyper-V), Windows Server, Active Directory, DNS, DHCP, and enterprise networking. Proactive in system monitoring, configuration, incident root-cause analysis, and maintaining 99%+ SLA service availability. 
+## Table of Contents
+- [Architecture Overview](#architecture-overview)
+- [Quick Start](#quick-start)
+- [Environments](#environments)
+- [Modules](#modules)
 
-#### 📜 Certifications:
-- 🏆 Microsoft Certified: **Azure Solutions Architect Expert (AZ-305)**
-- 🟢 Microsoft Certified: **Azure Administrator Associate (AZ-104)**
-- 🟦 Microsoft Certified: **MCSE & MCSA**
-- 🔜 *Actively preparing for: AWS Certified Solutions Architect – Associate (SAA-C03)*
+## Architecture Overview
+Here is my hub and spoke architecture setup for Azure. I built this to help separate our core networking components from application workloads.
 
-*"I don't just build servers; I engineer automated data pipelines and cloud architectures that drive business transformation."*
+## Quick Start
+To get started quickly, check out my examples in the `examples/basic` directory.
+
+## Environments
+I've split the configurations into these environments:
+- dev
+- uat
+- prod
+
+## Modules
+- hub
+- spoke
